@@ -14,16 +14,8 @@ jobs:
           mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
           mkdir -p "${{ runner.tool_cache }}"
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@8e0b1c74b1d5a0077b04d064c76ee714d3da7637
-        with:
-          languages: "java"
-            
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-            distribution: 'temurin'
-            java-version: 17
-            architecture: x64
+        uses: github/codeql-action@v2.14.6
+          
       - name: Archive tool cache
         run: |
           cd "${{ runner.tool_cache }}"
