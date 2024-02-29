@@ -14,7 +14,7 @@ jobs:
           mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
           mkdir -p "${{ runner.tool_cache }}"
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2.14.6
+        uses: github/codeql-action/init@2.14.6
         with:
           languages: "java"
             
